@@ -1,9 +1,12 @@
 import streamlit as st
 import pandas as pd
 import joblib
+import os
 
 # Caminho do modelo
-model_path = r"C:\Users\Daniel\Desktop\Project DNC\logistic_model_tuned.pkl"
+BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "../.."))
+model_path = os.path.join(BASE_DIR, "logistic_model_tuned.pkl")
+
 model = joblib.load(model_path)
 
 st.title("Simulação do Modelo Logistic Regression Tuned")

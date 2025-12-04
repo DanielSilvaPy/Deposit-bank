@@ -51,7 +51,7 @@ def train_LogisticRegression(save_model: bool = False):
         print("Modelo salvo como 'logistic_model_baseline.pkl'")
 
 
-def train_LogisticRegression_tuning(save_model: bool = False):
+def train_LogisticRegression_tuning(save_model: bool = True):
     """
     Treina um modelo de Logistic Regression otimizado com GridSearchCV.
     Explora hiperparâmetros, faz cross-validation e avalia métricas completas.
@@ -109,4 +109,4 @@ def train_LogisticRegression_tuning(save_model: bool = False):
         joblib.dump(best_model, "logistic_model_tuned.pkl")
         print("\nModelo salvo como 'logistic_model_tuned.pkl'")
 
-train_LogisticRegression_tuning(True)
+train_LogisticRegression_tuning()
